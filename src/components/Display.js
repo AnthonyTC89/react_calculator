@@ -5,8 +5,8 @@ import './Display.css';
 class Display extends Component {
   render() {
     return (
-      <div className="Display">
-        <p>Result: {this.props.result}</p>
+      <div className="display">
+        <p className="result">{this.props.result}</p>
       </div>
     );
   }
