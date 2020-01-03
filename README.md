@@ -4,7 +4,7 @@
   <p align="center">
     <br>
     <br>
-    <a href="#" target="_blank">Live Demo</a>
+    <a href="https://atc-react-calculator.herokuapp.com/" target="_blank">Live Demo</a>
     .
     <a href="https://github.com/AnthonyTC89/react_calculator/issues">Report Bug</a>
     ·
