@@ -24,11 +24,11 @@ module.exports = {
   rules: {
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
   },
-  settings: {
+  "settings": {
     "import/resolver": {
       "node": {
-        extensions: [".js", ".jsx", ".ts", ".tsx"],
-        moduleDirectory: ['node_modules', 'src/'],
+        "paths": ["src"],
+        "extensions": [".js", ".jsx", ".ts", ".tsx"],
       }
     }
   }
