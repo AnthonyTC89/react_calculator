@@ -7,6 +7,8 @@ module.exports = {
     'eslint:recommended',
     'plugin:react/recommended',
     'airbnb',
+    'plugin:import/errors',
+    'plugin:import/warnings',
   ],
   globals: {
     Atomics: 'readonly',
@@ -21,16 +23,17 @@ module.exports = {
   },
   plugins: [
     'react',
+    'import',
   ],
   rules: {
     'react/jsx-filename-extension': [1, { 'extensions': ['.js', '.jsx'] }],
     'react/prefer-stateless-function': [0, { 'ignorePureComponents': true }],
   },
-  "settings": {
+  settings: {
     "import/resolver": {
-      "node": {
-        "extensions": ['.js', '.jsx', '.ts', '.tsx'],
-        "paths": ['./src']
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+        paths: ['./src']
       }
     }
   }
