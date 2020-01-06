@@ -27,10 +27,10 @@ module.exports = {
     'react/prefer-stateless-function': [0, { 'ignorePureComponents': true }],
   },
   settings: {
-    "import/resolver": {
+    'import/resolver': {
       node: {
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
-        paths: ['src']
+        paths: ['./src']
       }
     }
   }
