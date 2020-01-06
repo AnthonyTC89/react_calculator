@@ -28,13 +28,6 @@ module.exports = {
   rules: {
     'react/jsx-filename-extension': [1, { 'extensions': ['.js', '.jsx'] }],
     'react/prefer-stateless-function': [0, { 'ignorePureComponents': true }],
+    "import/no-unresolved": "off",
   },
-  settings: {
-    "import/resolver": {
-      node: {
-        extensions: ['.js', '.jsx', '.ts', '.tsx'],
-        paths: ['./src']
-      }
-    }
-  }
 };
