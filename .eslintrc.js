@@ -23,6 +23,7 @@ module.exports = {
   ],
   rules: {
     'react/jsx-filename-extension': [1, { 'extensions': ['.js', '.jsx'] }],
+    "import/no-unresolved": [2, { "caseSensitive": false }]
   },
   settings: {
     'import/resolver': {
