@@ -6,9 +6,7 @@
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
-    "airbnb",
-    "plugin:import/errors",
-    "plugin:import/warnings"
+    "airbnb"
   ],
   "globals": {
     "Atomics": "readonly",
@@ -22,12 +20,12 @@
     "sourceType": "module"
   },
   "plugins": [
-    "react",
-    "import"
+    "react"
   ],
   "rules": {
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-    "react/prefer-stateless-function": [0, { "ignorePureComponents": true }],
-    "import/no-unresolved": "off"
+    "react/prefer-stateless-function": [1, { "ignorePureComponents": true }],
+    "import/no-unresolved": "off",
+    "no-shadow": "off"
   }
 }

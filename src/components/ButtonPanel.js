@@ -1,43 +1,25 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Button from './Button';
 import './ButtonPanel.css';
 
-class ButtonPanel extends Component {
-  render() {
-    return (
-      <div className="ButtonPanel">
-        <div className="Group-1">
-          <Button name="AC" />
-          <Button name="+/-" />
-          <Button name="%" />
-          <Button name="÷" />
-        </div>
-        <div className="Group-2">
-          <Button name="7" />
-          <Button name="8" />
-          <Button name="9" />
-          <Button name="X" />
-        </div>
-        <div className="Group-3">
-          <Button name="4" />
-          <Button name="5" />
-          <Button name="6" />
-          <Button name="-" />
-        </div>
-        <div className="Group-4">
-          <Button name="1" />
-          <Button name="2" />
-          <Button name="3" />
-          <Button name="+" />
-        </div>
-        <div className="Group-5">
-          <Button name="0" />
-          <Button name="." />
-          <Button name="=" />
-        </div>
+const arraySymbols = [
+  ['AC', '+/-', '%', '÷'],
+  ['7', '8', '9', 'X'],
+  ['4', '5', '6', '-'],
+  ['1', '2', '3', '+'],
+  ['0', '.', '='],
+];
+
+const ButtonPanel = () => (
+  <div className="ButtonPanel">
+    { arraySymbols.map((row, i) => (
+      <div key={i.toString()}>
+        { row.map((item, j) => (
+          <Button key={item + j.toString()} name={item} />
+        ))}
       </div>
-    );
-  }
-}
+    ))}
+  </div>
+);
 
 export default ButtonPanel;
