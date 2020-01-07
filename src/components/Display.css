@@ -1,9 +1,9 @@
 .display {
-  background: rgb(0, 0, 0, 0.5);
-  max-width: 10rem;
-  margin: 0 auto;
-  text-align: right;
-}
-.result {
-  padding: 0 1rem;
+  background:#858693;
+  display: flex;
+  justify-content: flex-end;
+  height: 6rem;
+  color: white;
+  font-weight: bold;
+  width: 100%;
 }

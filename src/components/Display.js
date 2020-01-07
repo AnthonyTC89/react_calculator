@@ -6,7 +6,7 @@ function Display(props) {
   const { result } = props;
   return (
     <div className="display">
-      <p className="result">{result}</p>
+      { result }
     </div>
   );
 }
