@@ -11,16 +11,6 @@
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
-<<<<<<< HEAD
-  "extends": ["airbnb", "plugin:react/recommended"],
-  "plugins": ["react"],
-  "rules": {
-    "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }],
-    "import/no-unresolved": "off",
-    "no-shadow": "off"
-  }
-}
-=======
   "extends": [
     "plugin:react/recommended",
     "airbnb"
@@ -40,4 +30,3 @@
   }
 }
 
->>>>>>> 535da3eeb4cc12701246d0e06ea91c1bf375ee86
