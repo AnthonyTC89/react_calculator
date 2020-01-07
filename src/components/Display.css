@@ -1,0 +1,14 @@
+.display {
+  background:#858693;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 6rem;
+  width: 100%;
+}
+.result {
+  color: white;
+  font-weight: bold;
+  margin: auto 1rem;
+  font-size: 3rem;
+}

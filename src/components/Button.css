@@ -1,0 +1,22 @@
+.button, .buttonZero {
+  color: black;
+  height: 6rem;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.button {
+  width: 25%;
+}
+
+.buttonZero {
+  width: 50%;
+}
+
+.gray {
+  background: #E0E0E0;
+}
+
+.orange {
+  background: #F5913E;
+}

@@ -1,0 +1,7 @@
+.buttonPanel {
+  display: flex;
+  flex-direction: column;
+}
+.row {
+  height: 6rem;
+}
