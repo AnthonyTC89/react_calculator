@@ -10,16 +10,30 @@ const arraySymbols = [
   ['0', '.', '='],
 ];
 
+const buttonOperation = (item) => {
+  if (item === '÷' || item === 'X' || item === '-' || item === '+' || item === '=') {
+    return true;
+  }
+  return false;
+};
+
 const ButtonPanel = () => (
   <div className="buttonPanel">
     { arraySymbols.map((row, i) => (
       <div className="row" key={i.toString()}>
         { row.map((item, j) => (
-          <Button key={item + j.toString()} name={item} />
+          <Button
+            key={item + j.toString()}
+            name={item}
+            color={buttonOperation(item) ? 'orange' : 'gray'}
+            wide={item === '0'}
+          />
         ))}
       </div>
     ))}
   </div>
 );
+
+
 
 export default ButtonPanel;
