@@ -11,9 +11,9 @@ const arraySymbols = [
 ];
 
 const ButtonPanel = () => (
-  <div className="ButtonPanel">
+  <div className="buttonPanel">
     { arraySymbols.map((row, i) => (
-      <div key={i.toString()}>
+      <div className="row" key={i.toString()}>
         { row.map((item, j) => (
           <Button key={item + j.toString()} name={item} />
         ))}
