@@ -20,7 +20,6 @@ const buttonOperation = (item) => {
 
 const ButtonPanel = (props) => {
   const handleClick = (name) => props.clickHandler(name);
-
   return (
     <div className="buttonPanel">
       { arraySymbols.map((row, i) => (
