@@ -16,7 +16,7 @@ Display.propTypes = {
 };
 
 Display.defaultProps = {
-  text: '0',
+  text: '',
 };
 
 

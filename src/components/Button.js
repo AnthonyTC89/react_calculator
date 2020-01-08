@@ -2,13 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Button.css';
 
-const Button = ({
-  name, color, wide, clickHandler,
-}) => {
-  const handleClick = (name) => clickHandler(name);
+const Button = (props) => {
+  const {
+    name, color, wide, clickHandler,
+  } = props;
+  const handleClick = () => clickHandler(name);
   const classes = wide ? ['buttonZero', color] : ['button', color];
   return (
-    <button className={classes.join(' ')} type="button" onClick={handleClick(name)}>
+    <button className={classes.join(' ')} type="button" onClick={handleClick}>
       { name }
     </button>
   );
@@ -25,7 +26,6 @@ Button.defaultProps = {
   name: '',
   color: 'orange',
   wide: false,
-  clickHandler: null,
 };
 
 

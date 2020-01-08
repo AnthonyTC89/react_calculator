@@ -19,7 +19,8 @@ const buttonOperation = (item) => {
 };
 
 const ButtonPanel = (props) => {
-  const handleClick = (name) => props.clickHandler(name);
+  const { clickHandler } = props;
+  const handleClick = (btnName) => clickHandler(btnName);
   return (
     <div className="buttonPanel">
       { arraySymbols.map((row, i) => (
@@ -44,7 +45,6 @@ ButtonPanel.propTypes = {
 };
 
 ButtonPanel.defaultProps = {
-  clickHandler: null,
 };
 
 export default ButtonPanel;

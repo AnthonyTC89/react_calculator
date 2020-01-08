@@ -1,48 +1,56 @@
 /* eslint no-param-reassign: ["error", { "props": false }] */
 import operate from './operate';
 
-const calculate = (data, name) => {
-  switch (name) {
+const calculate = (data, btnName) => {
+  switch (btnName) {
     case 'AC':
-      data.total = '0'; // nil
-      data.next = '0'; // nil
-      data.operation = ''; // nil
+      data.total = null;
+      data.next = null;
+      data.operation = null;
       return data;
     case '+/-':
       data.total = operate(data.total, '-1', 'X');
       data.next = operate(data.next, '-1', 'X');
       return data;
     case '%':
+      data.operation = '%';
       data.total = operate(data.total, data.next, data.operation);
       data.next = '';
-      data.operation = '%';
       return data;
     case '÷':
+      data.operation = '÷';
       data.total = operate(data.total, data.next, data.operation);
       data.next = '';
-      data.operation = '÷';
       return data;
     case 'X':
+      data.operation = 'X';
       data.total = operate(data.total, data.next, data.operation);
       data.next = '';
-      data.operation = 'X';
       return data;
     case '-':
+      data.operation = '-';
       data.total = operate(data.total, data.next, data.operation);
       data.next = '';
-      data.operation = '-';
       return data;
     case '+':
+      data.operation = '+';
       data.total = operate(data.total, data.next, data.operation);
       data.next = '';
-      data.operation = '+';
       return data;
     case '=':
+      data.operation = '';
       data.total = operate(data.total, data.next, data.operation);
       data.next = '';
-      data.operation = '';
       return data;
     default:
+      if (data.next === '0' && btnName === '0') {
+        return data;
+      }
+      if (data.next) {
+        data.next += btnName;
+      } else {
+        data.next = btnName;
+      }
       return data;
   }
 };
