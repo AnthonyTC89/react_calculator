@@ -9,38 +9,37 @@ const calculate = (data, btnName) => {
       data.operation = null;
       return data;
     case '+/-':
-      data.total = operate(data.total, '-1', 'X');
       data.next = operate(data.next, '-1', 'X');
       return data;
     case '%':
       data.operation = '%';
-      data.total = operate(data.total, data.next, data.operation);
-      data.next = '';
+      data.total = operate(data.next, data.total, data.operation);
+      data.next = null;
       return data;
     case '÷':
       data.operation = '÷';
-      data.total = operate(data.total, data.next, data.operation);
-      data.next = '';
+      data.total = operate(data.next, data.total, data.operation);
+      data.next = null;
       return data;
     case 'X':
       data.operation = 'X';
-      data.total = operate(data.total, data.next, data.operation);
-      data.next = '';
+      data.total = operate(data.next, data.total, data.operation);
+      data.next = null;
       return data;
     case '-':
       data.operation = '-';
-      data.total = operate(data.total, data.next, data.operation);
-      data.next = '';
+      data.total = operate(data.next, data.total, data.operation);
+      data.next = null;
       return data;
     case '+':
       data.operation = '+';
-      data.total = operate(data.total, data.next, data.operation);
-      data.next = '';
+      data.total = operate(data.next, data.total, data.operation);
+      data.next = null;
       return data;
     case '=':
-      data.operation = '';
-      data.total = operate(data.total, data.next, data.operation);
-      data.next = '';
+      data.total = operate(data.next, data.total, data.operation);
+      data.next = null;
+      data.operation = null;
       return data;
     default:
       if (data.next === '0' && btnName === '0') {

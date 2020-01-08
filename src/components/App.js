@@ -20,11 +20,10 @@ const App = () => {
       next: result.next,
       operation: result.operation,
     });
-    console.log('state:', state);
   };
   return (
     <div className="App">
-      <Display text={state.total || state.next ? state.next : '0'} />
+      <Display text={state.total || state.next} />
       <ButtonPanel clickHandler={handleClick} />
     </div>
   );
