@@ -1,45 +1,46 @@
+/* eslint no-param-reassign: ["error", { "props": false }] */
 import operate from './operate';
 
-const calculate = ({data: {total, next, operation}, name}) => {
+const calculate = ({ data, name }) => {
   switch (name) {
     case 'AC':
-      total = 0; // nil
-      next = 0; // nil
-      operation = ''; // nil
+      data.total = 0; // nil
+      data.next = 0; // nil
+      data.operation = ''; // nil
       break;
-    case '+/-': 
-      total = total * -1;
-      next = next * -1;
+    case '+/-':
+      data.total *= -1;
+      data.next *= -1;
       break;
-    case '%': 
-      total = operate(total, next, operation);
-      next = '';
-      operation = '%';
+    case '%':
+      data.total = operate(data.total, data.next, data.operation);
+      data.next = '';
+      data.operation = '%';
       break;
-    case '÷': 
-      total = operate(total, next, operation);
-      next = '';
-      operation = '÷'
+    case '÷':
+      data.total = operate(data.total, data.next, data.operation);
+      data.next = '';
+      data.operation = '÷';
       break;
-    case 'X': 
-      total = operate(total, next, operation);
-      next = '';
-      operation = 'X'
+    case 'X':
+      data.total = operate(data.total, data.next, data.operation);
+      data.next = '';
+      data.operation = 'X';
       break;
-    case '-': 
-      total = operate(total, next, operation);
-      next = '';
-      operation = '-'
+    case '-':
+      data.total = operate(data.total, data.next, data.operation);
+      data.next = '';
+      data.operation = '-';
       break;
-    case '+': 
-      total = operate(total, next, operation);
-      next = '';
-      operation = '+'
+    case '+':
+      data.total = operate(data.total, data.next, data.operation);
+      data.next = '';
+      data.operation = '+';
       break;
-    case '=': 
-      total = operate(total, next, operation);
-      next = '';
-      operation = '';
+    case '=':
+      data.total = operate(data.total, data.next, data.operation);
+      data.next = '';
+      data.operation = '';
       break;
     default:
       break;
