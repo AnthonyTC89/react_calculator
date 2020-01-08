@@ -5,11 +5,21 @@ import './App.css';
 // eslint-disable-next-line no-unused-vars
 import calculate from '../logic/operate';
 
-const App = () => (
-  <div className="App">
-    <Display />
-    <ButtonPanel />
-  </div>
-);
+const App = () => {
+  constructor(props) {
+    super(props);
+    this.state = {
+      total: 0,
+      next: 0,
+      operation: ''
+    };
+  }
+  return (
+    <div className="App">
+      <Display />
+      <ButtonPanel />
+    </div>
+  );
+};
 
 export default App;
