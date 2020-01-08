@@ -21,7 +21,7 @@ const App = () => {
   return (
     <div className="App">
       <Display text={state.total === '0' ? state.next : state.total} />
-      <ButtonPanel />
+      <ButtonPanel clickHandler={handleClick} />
     </div>
   );
 };
