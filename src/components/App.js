@@ -7,8 +7,8 @@ import calculate from '../logic/operate';
 
 const App = () => {
   const [state, setState] = React.useState({
-    total: 0,
-    next: 0,
+    total: '0',
+    next: '0',
     operation: '',
   });
 
@@ -17,9 +17,10 @@ const App = () => {
     const result = calculate(data, name);
     setState({ result });
   };
+
   return (
     <div className="App">
-      <Display />
+      <Display text={state.total === '0' ? state.next : state.total} />
       <ButtonPanel />
     </div>
   );
