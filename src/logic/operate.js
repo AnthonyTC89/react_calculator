@@ -13,6 +13,9 @@ const operate = (numberOne, numberTwo, operation) => {
     case 'X':
       return x.times(y);
     case '÷':
+      if (y === 0) {
+        return null;
+      }
       return x.div(y);
     case '%':
       return x.div(100).times(y);

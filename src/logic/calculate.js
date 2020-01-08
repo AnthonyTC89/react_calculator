@@ -7,43 +7,43 @@ const calculate = ({ data, name }) => {
       data.total = 0; // nil
       data.next = 0; // nil
       data.operation = ''; // nil
-      break;
+      return data;
     case '+/-':
       data.total *= -1;
       data.next *= -1;
-      break;
+      return data;
     case '%':
       data.total = operate(data.total, data.next, data.operation);
       data.next = '';
       data.operation = '%';
-      break;
+      return data;
     case '÷':
       data.total = operate(data.total, data.next, data.operation);
       data.next = '';
       data.operation = '÷';
-      break;
+      return data;
     case 'X':
       data.total = operate(data.total, data.next, data.operation);
       data.next = '';
       data.operation = 'X';
-      break;
+      return data;
     case '-':
       data.total = operate(data.total, data.next, data.operation);
       data.next = '';
       data.operation = '-';
-      break;
+      return data;
     case '+':
       data.total = operate(data.total, data.next, data.operation);
       data.next = '';
       data.operation = '+';
-      break;
+      return data;
     case '=':
       data.total = operate(data.total, data.next, data.operation);
       data.next = '';
       data.operation = '';
-      break;
+      return data;
     default:
-      break;
+      return data;
   }
 };
 
