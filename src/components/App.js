@@ -6,14 +6,17 @@ import './App.css';
 import calculate from '../logic/operate';
 
 const App = () => {
-  constructor(props) {
-    super(props);
-    this.state = {
-      total: 0,
-      next: 0,
-      operation: ''
-    };
-  }
+  const [state, setState] = React.useState({
+    total: 0,
+    next: 0,
+    operation: '',
+  });
+
+  const handleClick = (name) => {
+    const data = { ...state };
+    const result = calculate(data, name);
+    setState({ result });
+  };
   return (
     <div className="App">
       <Display />

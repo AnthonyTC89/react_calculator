@@ -1,7 +1,7 @@
 /* eslint no-param-reassign: ["error", { "props": false }] */
 import operate from './operate';
 
-const calculate = ({ data, name }) => {
+const calculate = (data, name) => {
   switch (name) {
     case 'AC':
       data.total = 0; // nil
