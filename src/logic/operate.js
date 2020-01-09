@@ -2,8 +2,8 @@
 import Big from 'big.js';
 
 const operate = (numberOne, numberTwo, operation) => {
-  if (numberTwo === null) {
-    return numberOne;
+  if (numberOne === null) {
+    return numberTwo;
   }
   const x = new Big(numberOne);
   const y = new Big(numberTwo);
@@ -15,12 +15,10 @@ const operate = (numberOne, numberTwo, operation) => {
     case 'X':
       return x.times(y).toString();
     case '÷':
-      if (y === 0) {
-        return 'null';
+      if (y.eq(0)) {
+        return '0';
       }
-      return y.div(x).toString();
-    case '%':
-      return x.div(100).times(y).toString();
+      return x.div(y).toString();
     default:
       return 'null';
   }

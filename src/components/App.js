@@ -23,7 +23,7 @@ const App = () => {
   };
   return (
     <div className="App">
-      <Display text={state.total || state.next} />
+      <Display text={state.next || state.total || '0'} />
       <ButtonPanel clickHandler={handleClick} />
     </div>
   );
