@@ -26,6 +26,7 @@ Button.defaultProps = {
   name: '',
   color: 'orange',
   wide: false,
+  clickHandler: null,
 };
 
 

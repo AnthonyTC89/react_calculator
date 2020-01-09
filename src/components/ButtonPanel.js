@@ -1,3 +1,4 @@
+/* eslint-disable arrow-parens */
 import React from 'react';
 import PropTypes from 'prop-types';
 import Button from './Button';
@@ -45,6 +46,7 @@ ButtonPanel.propTypes = {
 };
 
 ButtonPanel.defaultProps = {
+  clickHandler: null,
 };
 
 export default ButtonPanel;
