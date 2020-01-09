@@ -19,32 +19,32 @@ const calculate = (data, btnName) => {
       }
       return data;
     case '÷':
-      data.operation = '÷';
       if (data.next) {
         data.total = operate(data.total, data.next, data.operation);
         data.next = null;
       }
+      data.operation = '÷';
       return data;
     case 'X':
-      data.operation = 'X';
       if (data.next) {
         data.total = operate(data.total, data.next, data.operation);
         data.next = null;
       }
+      data.operation = 'X';
       return data;
     case '-':
-      data.operation = '-';
       if (data.next) {
         data.total = operate(data.total, data.next, data.operation);
         data.next = null;
       }
+      data.operation = '-';
       return data;
     case '+':
-      data.operation = '+';
       if (data.next) {
         data.total = operate(data.total, data.next, data.operation);
         data.next = null;
       }
+      data.operation = '+';
       return data;
     case '=':
       if (data.operation && data.next && data.total) {
