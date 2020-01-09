@@ -54,10 +54,13 @@ const calculate = (data, btnName) => {
       }
       return data;
     default:
-      if (data.next === '0' && btnName === '0') {
+      if (btnName === '0' && data.next === '0') {
         return data;
       }
       if (data.next) {
+        if (btnName === '.' && data.next.includes('.')) {
+          return data;
+        }
         data.next += btnName;
       } else {
         data.next = btnName;
