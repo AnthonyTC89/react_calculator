@@ -2,21 +2,21 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Display.css';
 
-function Display(props) {
-  const { result } = props;
+const Display = (props) => {
+  const { text } = props;
   return (
     <div className="display">
-      <span className="result">{ result }</span>
+      <span className="result">{ text }</span>
     </div>
   );
-}
+};
 
 Display.propTypes = {
-  result: PropTypes.string,
+  text: PropTypes.string,
 };
 
 Display.defaultProps = {
-  result: '0',
+  text: '',
 };
 
 

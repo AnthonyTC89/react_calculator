@@ -1,4 +1,6 @@
+/* eslint-disable arrow-parens */
 import React from 'react';
+import PropTypes from 'prop-types';
 import Button from './Button';
 import './ButtonPanel.css';
 
@@ -17,21 +19,34 @@ const buttonOperation = (item) => {
   return false;
 };
 
-const ButtonPanel = () => (
-  <div className="buttonPanel">
-    { arraySymbols.map((row, i) => (
-      <div className="row" key={i.toString()}>
-        { row.map((item, j) => (
-          <Button
-            key={item + j.toString()}
-            name={item}
-            color={buttonOperation(item) ? 'orange' : 'gray'}
-            wide={item === '0'}
-          />
-        ))}
-      </div>
-    ))}
-  </div>
-);
+const ButtonPanel = (props) => {
+  const { clickHandler } = props;
+  const handleClick = (btnName) => clickHandler(btnName);
+  return (
+    <div className="buttonPanel">
+      { arraySymbols.map((row, i) => (
+        <div className="row" key={i.toString()}>
+          { row.map((item, j) => (
+            <Button
+              key={item + j.toString()}
+              name={item}
+              color={buttonOperation(item) ? 'orange' : 'gray'}
+              wide={item === '0'}
+              clickHandler={handleClick}
+            />
+          ))}
+        </div>
+      ))}
+    </div>
+  );
+};
+
+ButtonPanel.propTypes = {
+  clickHandler: PropTypes.func,
+};
+
+ButtonPanel.defaultProps = {
+  clickHandler: null,
+};
 
 export default ButtonPanel;
