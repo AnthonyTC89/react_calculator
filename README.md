@@ -4,7 +4,7 @@
   <p align="center">
     <br>
     <br>
-    <a href="https://feature-style.d1mt0f332rdrd4.amplifyapp.com/" target="_blank">Live Demo</a>
+    <a href="https://develop.d1mt0f332rdrd4.amplifyapp.com/" target="_blank">Live Demo</a>
     .
     <a href="https://github.com/AnthonyTC89/react_calculator/issues">Report Bug</a>
     ·
