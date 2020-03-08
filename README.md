@@ -23,6 +23,7 @@
 * [Main Features](#main-features)
 * [Built With](#built-with)
 * [Installation](#installation)
+* [Testing](#testing)
 * [Contact](#Contact)
 
 <!-- ABOUT THE PROJECT -->
@@ -48,6 +49,10 @@ The goal of the project is learn more about the State of the FrameWork React.
   1. Clone the repository [react_calculator](https://github.com/AnthonyTC89/react_calculator)
   2. Go to the folder app and run `npm install`
   3. Run `npm start`
+
+### Testing
+
+  1. In the root folder run: `npm test`
 
 ### Contact
 
